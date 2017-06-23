@@ -1,4 +1,6 @@
 # Docker ddclient image for Raspberry Pi (and other armhf)
+[![](https://images.microbadger.com/badges/image/mjenz/rpi-ddclient.svg)](https://microbadger.com/images/mjenz/rpi-ddclient "Get your own image badge on microbadger.com")
+
 This image contains ddclient 3.8.3 on Alpine Linux 3.6.
 Based loosely on [babim/docker-alp-ddclient](https://github.com/babim/docker-alp-ddclient).
 I use it to keep a Cloudflare domain updated (see [Cloudflare's documentation](https://www.cloudflare.com/technical-resources/#ddclient)).
