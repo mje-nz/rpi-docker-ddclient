@@ -6,4 +6,22 @@ Based loosely on [babim/docker-alp-ddclient](https://github.com/babim/docker-alp
 I use it to keep a CloudFlare domain updated (see [CloudFlare's documentation](https://www.cloudflare.com/technical-resources/#ddclient)).
 
 To install as a service:
-```docker run --volume $(pwd)/ddclient.conf:/etc/ddclient/ddclient.conf --name ddclient --restart unless-stopped --detach -t mjenz/rpi-ddclient```
+```
+docker run --volume $(pwd)/ddclient.conf:/etc/ddclient/ddclient.conf --name ddclient --restart unless-stopped --detach -t mjenz/rpi-ddclient
+```
+
+Your config file should look something like this:
+```
+daemon=1800
+foreground=yes
+ssl=yes
+use=web
+web=dnspark
+
+protocol=cloudflare, \
+zone=(your zone), \
+login=(your login), \
+password=(your password) \
+(your domain)
+```
+
